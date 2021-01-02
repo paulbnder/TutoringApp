@@ -5,15 +5,12 @@
              xmlns:local="clr-namespace:LanguageTeacherApp.ViewModels"  
              xmlns:model="clr-namespace:LanguageTeacherApp.Models">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="See all teachers:"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Margin="5" Spacing="10">
             <RefreshView x:DataType="local:TeacherOverviewViewModel" Command="{Binding LoadTeachersCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
                 <CollectionView ItemsSource="{Binding Teachers}">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <Frame CornerRadius="10" OutlineColor="Gray">
+                            <Frame CornerRadius="10" OutlineColor="Gray" Padding="0">
                                 <StackLayout x:DataType="model:Teacher" HeightRequest="100">
                                     <StackLayout Orientation="Horizontal">
                                         <Image WidthRequest="100" HeightRequest="100"  Source="{Binding ProfilePictureSource}"></Image>
