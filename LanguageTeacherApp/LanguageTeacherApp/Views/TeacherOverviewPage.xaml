@@ -5,27 +5,23 @@
              xmlns:local="clr-namespace:LanguageTeacherApp.ViewModels"  
              xmlns:model="clr-namespace:LanguageTeacherApp.Models">
     <ContentPage.Content>
-        <StackLayout Margin="5" Spacing="10">
+        <StackLayout Margin="3" Spacing="200" >
             <RefreshView x:DataType="local:TeacherOverviewViewModel" Command="{Binding LoadTeachersCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
                 <CollectionView ItemsSource="{Binding Teachers}">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <Frame CornerRadius="10" OutlineColor="Gray" Padding="0">
-                                <StackLayout x:DataType="model:Teacher" HeightRequest="100">
-                                    <StackLayout Orientation="Horizontal">
+                            <StackLayout x:DataType="model:Teacher">
+                                <Frame CornerRadius="10" OutlineColor="Gray" Padding="0">
+                                    <StackLayout Orientation="Horizontal" HeightRequest="120">
                                         <Image WidthRequest="100" HeightRequest="100"  Source="{Binding ProfilePictureSource}"></Image>
                                         <Label Text="{Binding Name}" LineBreakMode="NoWrap" Style="{DynamicResource ListItemTextStyle}" FontSize="16" />
-                                        
                                     </StackLayout>
-                                </StackLayout>
-                            </Frame>
+                                </Frame>
+                            </StackLayout>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
             </RefreshView>
         </StackLayout>
-
-       
     </ContentPage.Content>
-    
 </ContentPage>
