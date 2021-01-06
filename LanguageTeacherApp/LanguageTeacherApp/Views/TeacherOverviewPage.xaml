@@ -16,7 +16,25 @@
                                         <Image WidthRequest="120" HeightRequest="120"  Source="{Binding ProfilePictureSource}"></Image>
                                     </Frame>
                                     <StackLayout Margin="20, 0">
-                                        <Label Text="{Binding Name}" LineBreakMode="NoWrap" FontSize="20" />
+                                        <Label Text="{Binding Name}" FontSize="20" />
+                                        <Label Text="{Binding Age, StringFormat='Age: {0}'}" FontSize="20"></Label>
+                                        <Label>
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <FormattedString.Spans>
+                                                        <Span FontAttributes="Bold"
+                                      FontSize="22"
+                                      Text="{Binding Subjects[0], StringFormat='{0} '}    " />
+                                                        <Span FontAttributes="Italic"
+                                      FontSize="22"
+                                      Text="Another span in italic. " />
+                                                        <Span FontAttributes="Bold"
+                                      FontSize="12"
+                                      Text="This one is smaller" />
+                                                    </FormattedString.Spans>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
                                     </StackLayout>
                                 </StackLayout>
                                 <BoxView HeightRequest="1" Color="Gray" Margin="10, 0"></BoxView>
