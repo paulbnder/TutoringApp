@@ -22,17 +22,17 @@ namespace LanguageTeacherApp.Services
             teachers = new List<Teacher>()
             {
                 new Teacher { Id = Guid.NewGuid().ToString(), Name = "Larisa Samuel", NativeLanguage="English", Occupation="Student", Subjects=subjectsMathsPhysics,
-                ProfilePictureSource="https://source.unsplash.com/ROJFuWCsfmA/70x70"},
+                ProfilePictureSource="https://source.unsplash.com/ROJFuWCsfmA/100x100"},
                 new Teacher { Id = Guid.NewGuid().ToString(), Name = "Peter Gray", NativeLanguage="German", Occupation="Student", Subjects=subjectsMathsPhysicsChemistry,
-                ProfilePictureSource="https://source.unsplash.com/c_GmwfHBDzk/70x70"},
+                ProfilePictureSource="https://source.unsplash.com/c_GmwfHBDzk/100x100"},
                 new Teacher { Id = Guid.NewGuid().ToString(), Name = "Loretta Dylan", NativeLanguage="Spanish", Occupation="Librarian", Subjects=subjectsEnglishSpanishFrench,
-                ProfilePictureSource="https://source.unsplash.com/JN0SUcTOig0/70x70"},
+                ProfilePictureSource="https://source.unsplash.com/JN0SUcTOig0/100x100"},
                 new Teacher { Id = Guid.NewGuid().ToString(), Name = "Brynne Starr", NativeLanguage="English", Occupation="Web Designer", Subjects=subjectsMaths,
-                ProfilePictureSource="https://source.unsplash.com/tTdC88_6a_I/70x70"},
+                ProfilePictureSource="https://source.unsplash.com/tTdC88_6a_I/100x100"},
                 new Teacher { Id = Guid.NewGuid().ToString(), Name = "Roland Sandy", NativeLanguage="Japanese", Subjects=subjectsEnglishSpanishFrench,
-                ProfilePictureSource="https://source.unsplash.com/YUu9UAcOKZ4/70x70"},
+                ProfilePictureSource="https://source.unsplash.com/YUu9UAcOKZ4/100x100"},
                 new Teacher { Id = Guid.NewGuid().ToString(), Name = "Ronan Kurtis", NativeLanguage="English", Occupation="Student", Subjects=subjectsEnglishSpanish,
-                ProfilePictureSource="https://source.unsplash.com/v2aKnjMbP_k/70x70"}
+                ProfilePictureSource="https://source.unsplash.com/v2aKnjMbP_k/100x100"}
             };
         }
 
