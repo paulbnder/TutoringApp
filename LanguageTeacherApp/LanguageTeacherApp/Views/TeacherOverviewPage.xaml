@@ -18,7 +18,12 @@
                                     <StackLayout Margin="20, 0">
                                         <Label Text="{Binding Name}" FontSize="20" />
                                         <Label Text="{Binding Age, StringFormat='Age: {0}'}" FontSize="20"></Label>
-                                        <Label>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="{Binding Subjects[0], StringFormat='Subjects: {0} '}    " FontSize="20" LineBreakMode="NoWrap"></Label>
+                                            <Label Text="{Binding Subjects[1], StringFormat='{0} '}    " FontSize="20" LineBreakMode="NoWrap"></Label>
+                                            <Label Text="{Binding Subjects[2], StringFormat='{0} '}    " FontSize="20" LineBreakMode="NoWrap"></Label>
+                                        </StackLayout>
+                                        <!--<Label>
                                             <Label.FormattedText>
                                                 <FormattedString>
                                                     <FormattedString.Spans>
@@ -34,7 +39,7 @@
                                                     </FormattedString.Spans>
                                                 </FormattedString>
                                             </Label.FormattedText>
-                                        </Label>
+                                        </Label>-->
                                     </StackLayout>
                                 </StackLayout>
                                 <BoxView HeightRequest="1" Color="Gray" Margin="10, 0"></BoxView>
