@@ -4,8 +4,18 @@
              x:Class="LanguageTeacherApp.Views.TeacherOverviewPage"
              xmlns:local="clr-namespace:LanguageTeacherApp.ViewModels"  
              xmlns:model="clr-namespace:LanguageTeacherApp.Models">
+
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Sign Up!" Command="{Binding AddTeacherCommand}" />
+    </ContentPage.ToolbarItems>
+
     <ContentPage.Content>
         <StackLayout Margin="0">
+            <!--
+      x:DataType to enable compiled bindings:
+      https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/data-binding/compiled-bindings
+    -->
             <RefreshView x:DataType="local:TeacherOverviewViewModel" Command="{Binding LoadTeachersCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
                 <CollectionView ItemsSource="{Binding Teachers}">
                     <CollectionView.ItemTemplate>
