@@ -36,24 +36,6 @@
                                             <Label Text="{Binding Subjects[1], StringFormat='{0}'}" FontSize="20" HorizontalOptions="Start" BackgroundColor="Red" Padding="0, 0" Margin="0,0"></Label>
                                             <Label Text="{Binding Subjects[2], StringFormat=' {0}'}" FontSize="20"></Label>
                                         </StackLayout>
-
-                                        <!--<Label>
-                                            <Label.FormattedText>
-                                                <FormattedString>
-                                                    <FormattedString.Spans>
-                                                        <Span FontAttributes="Bold"
-                                      FontSize="22"
-                                      Text="{Binding Subjects[0], StringFormat='{0} '}    " />
-                                                        <Span FontAttributes="Italic"
-                                      FontSize="22"
-                                      Text="Another span in italic. " />
-                                                        <Span FontAttributes="Bold"
-                                      FontSize="12"
-                                      Text="This one is smaller" />
-                                                    </FormattedString.Spans>
-                                                </FormattedString>
-                                            </Label.FormattedText>
-                                        </Label>-->
                                     </StackLayout>
                                 </StackLayout>
                                 <BoxView HeightRequest="1" Color="Gray" Margin="10, 0"></BoxView>
