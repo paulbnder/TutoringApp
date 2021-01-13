@@ -32,9 +32,9 @@
                                             <Label Text="Subjects:" FontSize="20" LineBreakMode="NoWrap"></Label>
                                             <Label Text="{Binding Subjects[0], StringFormat=' {0}'}" FontSize="20" HorizontalOptions="Start"></Label>
                                         </StackLayout>
-                                        <StackLayout Orientation="Horizontal" HorizontalOptions="Start" BackgroundColor="Aqua" Spacing="0">
-                                            <Label Text="{Binding Subjects[1], StringFormat='{0}'}" FontSize="20" HorizontalOptions="Start" BackgroundColor="Red" Padding="0, 0" Margin="0,0"></Label>
-                                            <Label Text="{Binding Subjects[2], StringFormat=' {0}'}" FontSize="20"></Label>
+                                        <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Spacing="0">
+                                            <Label Text="{Binding Subjects[1], StringFormat='{0}'}" FontSize="20" HorizontalOptions="Start" Padding="0, 0" Margin="0,0"></Label>
+                                            <Label Text="{Binding Subjects[2], StringFormat=', {0}'}" FontSize="20"></Label>
                                         </StackLayout>
                                     </StackLayout>
                                 </StackLayout>

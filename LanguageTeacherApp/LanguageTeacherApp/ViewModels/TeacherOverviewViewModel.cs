@@ -7,6 +7,7 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Text;
 using System.Threading.Tasks;
+using TutoringApp.Views;
 using Xamarin.Forms;
 
 namespace LanguageTeacherApp.ViewModels
@@ -89,7 +90,7 @@ namespace LanguageTeacherApp.ViewModels
 
         private async void OnAddTeacher(object obj)
         {
-            await Shell.Current.GoToAsync(nameof(NewItemPage));
+            await Shell.Current.GoToAsync(nameof(NewTeacherPage));
         }
     }
 }
