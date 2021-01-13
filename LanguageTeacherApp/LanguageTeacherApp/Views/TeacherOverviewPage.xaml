@@ -28,7 +28,7 @@
                                     <StackLayout Margin="20, 0">
                                         <Label Text="{Binding Name}" FontSize="20" />
                                         <Label Text="{Binding Age, StringFormat='Age: {0}'}" FontSize="20"></Label>
-                                        <StackLayout Orientation="Horizontal" HorizontalOptions="Start" BackgroundColor="Aqua" Spacing="0">
+                                        <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Spacing="0">
                                             <Label Text="Subjects:" FontSize="20" LineBreakMode="NoWrap"></Label>
                                             <Label Text="{Binding Subjects[0], StringFormat=' {0}'}" FontSize="20" HorizontalOptions="Start"></Label>
                                         </StackLayout>
