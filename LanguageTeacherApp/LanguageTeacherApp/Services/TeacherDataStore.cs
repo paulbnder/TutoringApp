@@ -45,5 +45,29 @@ namespace LanguageTeacherApp.Services
         {
             return await Task.FromResult(teachers);
         }
+
+        public async Task<bool> AddTeacherAsync(Teacher teacher)
+        {
+            teachers.Add(teacher);
+
+            return await Task.FromResult(true);
+        }
+
+        public async Task<bool> UpdateTeacherAsync(Teacher teacher)
+        {
+            var oldTeacher = teachers.Where((Teacher arg) => arg.Id == teacher.Id).FirstOrDefault();
+            teachers.Remove(oldTeacher);
+            teachers.Add(teacher);
+
+            return await Task.FromResult(true);
+        }
+
+        public async Task<bool> DeleteTeacherAsync(string id)
+        {
+            var oldTeacher = teachers.Where((Teacher arg) => arg.Id == id).FirstOrDefault();
+            teachers.Remove(oldTeacher);
+
+            return await Task.FromResult(true);
+        }
     }
 }
