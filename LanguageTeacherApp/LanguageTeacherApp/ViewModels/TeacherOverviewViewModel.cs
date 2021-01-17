@@ -1,16 +1,15 @@
-﻿using LanguageTeacherApp.Models;
-using LanguageTeacherApp.Services;
-using LanguageTeacherApp.Views;
+﻿using TutoringApp.Models;
+using TutoringApp.Services;
+using TutoringApp.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Text;
 using System.Threading.Tasks;
-using TutoringApp.Views;
 using Xamarin.Forms;
 
-namespace LanguageTeacherApp.ViewModels
+namespace TutoringApp.ViewModels
 {
     class TeacherOverviewViewModel : BaseViewModel
     {
@@ -61,7 +60,7 @@ namespace LanguageTeacherApp.ViewModels
                 Teachers.Clear();
                 Console.WriteLine("Cleared Teachers Collection, next comment after GetTeachersAsync");
 
-                var teachers = await DataStore.GetTeachersAsync(true);
+                var teachers = await DataStore.GetItemsAsync(true);
                 Console.WriteLine("Stored Teachers collection in 'teachers'");
 
                 foreach (var teacher in teachers)

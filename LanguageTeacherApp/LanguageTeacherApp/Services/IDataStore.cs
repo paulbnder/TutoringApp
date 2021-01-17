@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace LanguageTeacherApp.Services
+namespace TutoringApp.Services
 {
     public interface IDataStore<T>
     {

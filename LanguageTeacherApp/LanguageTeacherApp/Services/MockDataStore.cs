@@ -1,10 +1,10 @@
-﻿using LanguageTeacherApp.Models;
+﻿using TutoringApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace LanguageTeacherApp.Services
+namespace TutoringApp.Services
 {
     public class MockDataStore : IDataStore<Item>
     {

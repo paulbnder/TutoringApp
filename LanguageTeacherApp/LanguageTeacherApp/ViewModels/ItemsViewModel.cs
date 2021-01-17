@@ -1,12 +1,12 @@
-﻿using LanguageTeacherApp.Models;
-using LanguageTeacherApp.Views;
+﻿using TutoringApp.Models;
+using TutoringApp.Views;
 using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace LanguageTeacherApp.ViewModels
+namespace TutoringApp.ViewModels
 {
     public class ItemsViewModel : BaseViewModel
     {

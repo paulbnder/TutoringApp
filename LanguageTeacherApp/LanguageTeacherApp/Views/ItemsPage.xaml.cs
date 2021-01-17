@@ -1,6 +1,6 @@
-﻿using LanguageTeacherApp.Models;
-using LanguageTeacherApp.ViewModels;
-using LanguageTeacherApp.Views;
+﻿using TutoringApp.Models;
+using TutoringApp.ViewModels;
+using TutoringApp.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace LanguageTeacherApp.Views
+namespace TutoringApp.Views
 {
     public partial class ItemsPage : ContentPage
     {

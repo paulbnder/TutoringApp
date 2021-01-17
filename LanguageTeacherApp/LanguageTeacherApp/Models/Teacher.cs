@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace LanguageTeacherApp.Models
+namespace TutoringApp.Models
 {
     public class Teacher
     {

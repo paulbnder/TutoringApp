@@ -1,10 +1,10 @@
-﻿using LanguageTeacherApp.Services;
-using LanguageTeacherApp.Views;
+﻿using TutoringApp.Services;
+using TutoringApp.Views;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace LanguageTeacherApp
+namespace TutoringApp
 {
     public partial class App : Application
     {

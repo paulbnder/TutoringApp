@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LanguageTeacherApp.Models
+namespace TutoringApp.Models
 {
     public class Item
     {

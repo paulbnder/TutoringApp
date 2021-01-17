@@ -1,11 +1,11 @@
-﻿using LanguageTeacherApp.Models;
+﻿using TutoringApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
 
-namespace LanguageTeacherApp.ViewModels
+namespace TutoringApp.ViewModels
 {
     public class NewItemViewModel : BaseViewModel
     {

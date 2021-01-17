@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LanguageTeacherApp.ViewModels
+namespace TutoringApp.ViewModels
 {
     class TeacherDetailViewModel : BaseViewModel
     {

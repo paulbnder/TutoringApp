@@ -3,7 +3,7 @@ using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
-namespace LanguageTeacherApp.ViewModels
+namespace TutoringApp.ViewModels
 {
     public class AboutViewModel : BaseViewModel
     {

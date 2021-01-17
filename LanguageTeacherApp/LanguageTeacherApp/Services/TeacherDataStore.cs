@@ -1,13 +1,13 @@
-﻿using LanguageTeacherApp.Models;
+﻿using TutoringApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LanguageTeacherApp.Services
+namespace TutoringApp.Services
 {
-    public class TeacherDataStore
+    public class TeacherDataStore: IDataStore<Teacher>
     {
         readonly List<Teacher> teachers;
         public TeacherDataStore()
@@ -36,24 +36,24 @@ namespace LanguageTeacherApp.Services
             };
         }
 
-        public async Task<Teacher> GetTeacherAsync(string id)
+        public async Task<Teacher> GetItemAsync(string id)
         {
             return await Task.FromResult(teachers.FirstOrDefault(s => s.Id == id));
         }
 
-        public async Task<IEnumerable<Teacher>> GetTeachersAsync(bool forceRefresh = false)
+        public async Task<IEnumerable<Teacher>> GetItemsAsync(bool forceRefresh = false)
         {
             return await Task.FromResult(teachers);
         }
 
-        public async Task<bool> AddTeacherAsync(Teacher teacher)
+        public async Task<bool> AddItemAsync(Teacher teacher)
         {
             teachers.Add(teacher);
 
             return await Task.FromResult(true);
         }
 
-        public async Task<bool> UpdateTeacherAsync(Teacher teacher)
+        public async Task<bool> UpdateItemAsync(Teacher teacher)
         {
             var oldTeacher = teachers.Where((Teacher arg) => arg.Id == teacher.Id).FirstOrDefault();
             teachers.Remove(oldTeacher);
@@ -62,12 +62,13 @@ namespace LanguageTeacherApp.Services
             return await Task.FromResult(true);
         }
 
-        public async Task<bool> DeleteTeacherAsync(string id)
+        public async Task<bool> DeleteItemAsync(string id)
         {
             var oldTeacher = teachers.Where((Teacher arg) => arg.Id == id).FirstOrDefault();
             teachers.Remove(oldTeacher);
 
             return await Task.FromResult(true);
         }
+
     }
 }

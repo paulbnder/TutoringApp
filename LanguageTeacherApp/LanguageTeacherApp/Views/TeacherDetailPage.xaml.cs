@@ -1,4 +1,4 @@
-﻿using LanguageTeacherApp.ViewModels;
+﻿using TutoringApp.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace LanguageTeacherApp.Views
+namespace TutoringApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TeacherDetailPage : ContentPage

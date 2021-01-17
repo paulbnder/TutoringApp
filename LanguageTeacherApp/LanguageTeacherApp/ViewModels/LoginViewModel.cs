@@ -1,10 +1,10 @@
-﻿using LanguageTeacherApp.Views;
+﻿using TutoringApp.Views;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms;
 
-namespace LanguageTeacherApp.ViewModels
+namespace TutoringApp.ViewModels
 {
     public class LoginViewModel : BaseViewModel
     {

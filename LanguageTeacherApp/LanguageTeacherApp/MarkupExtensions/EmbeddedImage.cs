@@ -4,7 +4,7 @@ using System.Text;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace LanguageTeacherApp.MarkupExtensions
+namespace TutoringApp.MarkupExtensions
 {
     class EmbeddedImage : IMarkupExtension
     {

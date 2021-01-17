@@ -1,8 +1,8 @@
-﻿using LanguageTeacherApp.ViewModels;
+﻿using TutoringApp.ViewModels;
 using System.ComponentModel;
 using Xamarin.Forms;
 
-namespace LanguageTeacherApp.Views
+namespace TutoringApp.Views
 {
     public partial class ItemDetailPage : ContentPage
     {

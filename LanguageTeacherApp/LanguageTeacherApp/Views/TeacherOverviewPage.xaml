@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="LanguageTeacherApp.Views.TeacherOverviewPage"
-             xmlns:local="clr-namespace:LanguageTeacherApp.ViewModels"  
-             xmlns:model="clr-namespace:LanguageTeacherApp.Models">
+             x:Class="TutoringApp.Views.TeacherOverviewPage"
+             xmlns:local="clr-namespace:TutoringApp.ViewModels"  
+             xmlns:model="clr-namespace:TutoringApp.Models">
 
 
     <ContentPage.ToolbarItems>

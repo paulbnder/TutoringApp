@@ -1,10 +1,10 @@
-﻿using LanguageTeacherApp.ViewModels;
-using LanguageTeacherApp.Views;
+﻿using TutoringApp.ViewModels;
+using TutoringApp.Views;
 using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
 
-namespace LanguageTeacherApp
+namespace TutoringApp
 {
     public partial class AppShell : Xamarin.Forms.Shell
     {
