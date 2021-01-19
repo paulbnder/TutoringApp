@@ -9,9 +9,10 @@ namespace TutoringApp.Models
 
         public string Name { get; set; }
 
-        public int Age { get; set; }
+        public DateTime Birthday { get; set; }
 
-        public string Gender { get; set; }
+        public enum _Gender { male, female }
+        public _Gender Gender { get; set; }
 
         public string Occupation { get; set; }
 

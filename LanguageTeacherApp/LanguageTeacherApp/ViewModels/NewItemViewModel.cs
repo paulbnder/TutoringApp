@@ -11,6 +11,7 @@ namespace TutoringApp.ViewModels
     {
         private string text;
         private string description;
+      
 
         public NewItemViewModel()
         {

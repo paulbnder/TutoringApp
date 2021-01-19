@@ -21,17 +21,17 @@ namespace TutoringApp.Services
 
             teachers = new List<Teacher>()
             {
-                new Teacher { Id = Guid.NewGuid().ToString(), Name = "Larisa Samuel", Age=25, NativeLanguage="English", Occupation="Student", Subjects=subjectsMathsPhysics,
+                new Teacher { Id = Guid.NewGuid().ToString(), Name = "Larisa Samuel", Birthday = new DateTime(2000, 8, 14), NativeLanguage="English", Occupation="Student", Subjects=subjectsMathsPhysics,
                 ProfilePictureSource="https://source.unsplash.com/ROJFuWCsfmA/100x100"},
-                new Teacher { Id = Guid.NewGuid().ToString(), Name = "Peter Gray", Age=26, NativeLanguage="German", Occupation="Student", Subjects=subjectsMathsPhysicsChemistry,
+                new Teacher { Id = Guid.NewGuid().ToString(), Name = "Peter Gray", Birthday = new DateTime(1995, 10, 4), NativeLanguage="German", Occupation="Student", Subjects=subjectsMathsPhysicsChemistry,
                 ProfilePictureSource="https://source.unsplash.com/c_GmwfHBDzk/100x100"},
-                new Teacher { Id = Guid.NewGuid().ToString(), Name = "Loretta Dylan", Age=23, NativeLanguage="Spanish", Occupation="Librarian", Subjects=subjectsEnglishSpanishFrench,
+                new Teacher { Id = Guid.NewGuid().ToString(), Name = "Loretta Dylan", Birthday = new DateTime(1998, 2, 1), NativeLanguage="Spanish", Occupation="Librarian", Subjects=subjectsEnglishSpanishFrench,
                 ProfilePictureSource="https://source.unsplash.com/JN0SUcTOig0/100x100"},
-                new Teacher { Id = Guid.NewGuid().ToString(), Name = "Brynne Starr", Age=19, NativeLanguage="English", Occupation="Web Designer", Subjects=subjectsMaths,
+                new Teacher { Id = Guid.NewGuid().ToString(), Name = "Brynne Starr", Birthday = new DateTime(2002, 7, 30), NativeLanguage="English", Occupation="Web Designer", Subjects=subjectsMaths,
                 ProfilePictureSource="https://source.unsplash.com/tTdC88_6a_I/100x100"},
-                new Teacher { Id = Guid.NewGuid().ToString(), Name = "Roland Sandy", Age=20, NativeLanguage="Japanese", Subjects=subjectsEnglishSpanishFrench,
+                new Teacher { Id = Guid.NewGuid().ToString(), Name = "Roland Sandy", Birthday = new DateTime(2001, 11, 18), NativeLanguage="Japanese", Subjects=subjectsEnglishSpanishFrench,
                 ProfilePictureSource="https://source.unsplash.com/YUu9UAcOKZ4/100x100"},
-                new Teacher { Id = Guid.NewGuid().ToString(), Name = "Ronan Kurtis", Age=31, NativeLanguage="English", Occupation="Student", Subjects=subjectsEnglishSpanish,
+                new Teacher { Id = Guid.NewGuid().ToString(), Name = "Ronan Kurtis", Birthday = new DateTime(1990, 5, 17), NativeLanguage="English", Occupation="Student", Subjects=subjectsEnglishSpanish,
                 ProfilePictureSource="https://source.unsplash.com/v2aKnjMbP_k/100x100"}
             };
         }

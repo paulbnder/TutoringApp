@@ -1,16 +1,17 @@
-﻿using LanguageTeacherApp.Models;
-using LanguageTeacherApp.Services;
+﻿using TutoringApp.Models;
+using TutoringApp.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using Xamarin.Forms;
 
-namespace LanguageTeacherApp.ViewModels
+namespace TutoringApp.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
         public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
+        public IDataStore<Teacher> TeacherDataStore => DependencyService.Get<IDataStore<Teacher>>();
 
         bool isBusy = false;
         public bool IsBusy
