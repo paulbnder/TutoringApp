@@ -54,15 +54,10 @@ namespace TutoringApp.ViewModels
         async Task ExecuteLoadTeachersCommand()
         {
             IsBusy = true;
-            Console.WriteLine("Beginning of ExexuteLoadTeachers");
             try
             {
                 Teachers.Clear();
-                Console.WriteLine("Cleared Teachers Collection, next comment after GetTeachersAsync");
-
                 var teachers = await DataStore.GetItemsAsync(true);
-                Console.WriteLine("Stored Teachers collection in 'teachers'");
-
                 foreach (var teacher in teachers)
                 {
                     Teachers.Add(teacher);
