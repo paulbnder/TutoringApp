@@ -11,6 +11,18 @@ namespace TutoringApp.Models
 
         public DateTime Birthday { get; set; }
 
+        public int Age
+        {
+            get
+            {
+                var today = DateTime.Today;
+                var calculatedAge = today.Year - Birthday.Year;
+                if (Birthday.Date > today.AddYears(-calculatedAge)) calculatedAge--;
+
+                return calculatedAge;
+            }
+        }
+
         public enum _Gender { male, female }
         public _Gender Gender { get; set; }
 
