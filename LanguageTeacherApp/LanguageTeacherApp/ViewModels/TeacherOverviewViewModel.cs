@@ -57,7 +57,7 @@ namespace TutoringApp.ViewModels
             try
             {
                 Teachers.Clear();
-                var teachers = await DataStore.GetItemsAsync(true);
+                var teachers = await TeacherDataStore.GetItemsAsync(true);
                 foreach (var teacher in teachers)
                 {
                     Teachers.Add(teacher);
