@@ -8,10 +8,11 @@ using System.Diagnostics;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using System.Windows.Input;
 
 namespace TutoringApp.ViewModels
 {
-    class TeacherOverviewViewModel : BaseViewModel
+    public class TeacherOverviewViewModel : BaseViewModel
     {
         public new TeacherDataStore DataStore => DependencyService.Get<TeacherDataStore>();
 
@@ -75,8 +76,15 @@ namespace TutoringApp.ViewModels
 
         async void OnTeacherSelected(Teacher teacher)
         {
+            Console.WriteLine("Teacher Tapped");
             if (teacher == null)
+            {
+                Console.WriteLine("teacher is null");
                 return;
+
+            }
+            Console.WriteLine("Teacher not null");
+
             await Shell.Current.GoToAsync(nameof(NewItemPage));
 
             // This will push the TeacherDetailPage onto the navigation stack

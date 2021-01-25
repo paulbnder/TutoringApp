@@ -74,11 +74,12 @@ namespace TutoringApp.ViewModels
 
         async void OnItemSelected(Item item)
         {
-            if (item == null)
-                return;
+            //if (item == null)
+            //    return;
+            await Shell.Current.GoToAsync(nameof(NewItemPage));
 
             // This will push the ItemDetailPage onto the navigation stack
-            await Shell.Current.GoToAsync($"{nameof(ItemDetailPage)}?{nameof(ItemDetailViewModel.ItemId)}={item.Id}");
+            //await Shell.Current.GoToAsync($"{nameof(ItemDetailPage)}?{nameof(ItemDetailViewModel.ItemId)}={item.Id}");
         }
     }
 }

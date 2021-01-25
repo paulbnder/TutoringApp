@@ -12,10 +12,9 @@ using Xamarin.Forms.Xaml;
 
 namespace TutoringApp.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TeacherOverviewPage : ContentPage
     {
-        readonly TeacherOverviewViewModel _viewModel;
+        TeacherOverviewViewModel _viewModel;
 
         public TeacherOverviewPage()
         {
