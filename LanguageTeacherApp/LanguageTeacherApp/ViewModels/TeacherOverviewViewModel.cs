@@ -14,16 +14,18 @@ namespace TutoringApp.ViewModels
 {
     public class TeacherOverviewViewModel : BaseViewModel
     {
-        public new TeacherDataStore DataStore => DependencyService.Get<TeacherDataStore>();
-
         private Teacher _selectedTeacher;
+        public ObservableCollection<Teacher> Teachers { get; }
+
+
+        //public new TeacherDataStore DataStore => DependencyService.Get<TeacherDataStore>();
+
         public Command LoadTeachersCommand { get; }
         public Command AddTeacherCommand { get; }
 
-        public Command<Teacher> TeacherTapped;
+        public Command<Teacher> TeacherTapped { get; }
 
 
-        public ObservableCollection<Teacher> Teachers { get; }
 
         public TeacherOverviewViewModel()
         {
