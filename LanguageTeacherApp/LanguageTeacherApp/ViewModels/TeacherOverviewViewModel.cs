@@ -38,22 +38,6 @@ namespace TutoringApp.ViewModels
             AddTeacherCommand = new Command(OnAddTeacher);
         }
 
-        public void OnAppearing()
-        {
-            IsBusy = true;
-            SelectedTeacher = null;
-        }
-
-        public Teacher SelectedTeacher
-        {
-            get => _selectedTeacher;
-            set
-            {
-                SetProperty(ref _selectedTeacher, value);
-                OnTeacherSelected(value);
-            }
-        }
-
         async Task ExecuteLoadTeachersCommand()
         {
             IsBusy = true;
@@ -75,6 +59,29 @@ namespace TutoringApp.ViewModels
                 IsBusy = false;
             }
         }
+
+
+        public void OnAppearing()
+        {
+            IsBusy = true;
+            SelectedTeacher = null;
+        }
+
+        public Teacher SelectedTeacher
+        {
+            get => _selectedTeacher;
+            set
+            {
+                SetProperty(ref _selectedTeacher, value);
+                OnTeacherSelected(value);
+            }
+        }
+
+        private async void OnAddTeacher(object obj)
+        {
+            await Shell.Current.GoToAsync(nameof(NewTeacherPage));
+        }
+
 
         async void OnTeacherSelected(Teacher teacher)
         {
