@@ -94,7 +94,6 @@ namespace TutoringApp.ViewModels
             }
             Console.WriteLine("Teacher not null");
 
-            //await Shell.Current.GoToAsync(nameof(NewItemPage));
 
             // This will push the TeacherDetailPage onto the navigation stack
             await Shell.Current.GoToAsync($"{nameof(TeacherDetailPage)}?{nameof(TeacherDetailViewModel.TeacherId)}={teacher.Id}");

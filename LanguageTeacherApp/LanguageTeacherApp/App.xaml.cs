@@ -13,7 +13,6 @@ namespace TutoringApp
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
             DependencyService.Register<TeacherDataStore>();
             MainPage = new AppShell();
         }
