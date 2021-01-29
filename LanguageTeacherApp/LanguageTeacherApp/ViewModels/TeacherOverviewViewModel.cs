@@ -17,9 +17,6 @@ namespace TutoringApp.ViewModels
         private Teacher _selectedTeacher;
         public ObservableCollection<Teacher> Teachers { get; }
 
-
-        //public new TeacherDataStore DataStore => DependencyService.Get<TeacherDataStore>();
-
         public Command LoadTeachersCommand { get; }
         public Command AddTeacherCommand { get; }
 
@@ -85,15 +82,11 @@ namespace TutoringApp.ViewModels
 
         async void OnTeacherSelected(Teacher teacher)
         {
-            Console.WriteLine("Teacher Tapped");
             if (teacher == null)
             {
-                Console.WriteLine("teacher is null");
                 return;
 
             }
-            Console.WriteLine("Teacher not null");
-
 
             // This will push the TeacherDetailPage onto the navigation stack
             await Shell.Current.GoToAsync($"{nameof(TeacherDetailPage)}?{nameof(TeacherDetailViewModel.TeacherId)}={teacher.Id}");
