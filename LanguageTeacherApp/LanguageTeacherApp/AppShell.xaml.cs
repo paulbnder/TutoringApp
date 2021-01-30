@@ -13,6 +13,7 @@ namespace TutoringApp
             InitializeComponent();
             Routing.RegisterRoute(nameof(TeacherDetailPage), typeof(TeacherDetailPage));
             Routing.RegisterRoute(nameof(NewTeacherPage), typeof(NewTeacherPage));
+            Routing.RegisterRoute(nameof(TeacherOverviewPage), typeof(TeacherOverviewPage));
         }
 
     }
