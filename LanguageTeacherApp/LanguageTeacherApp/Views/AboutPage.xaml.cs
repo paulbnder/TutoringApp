@@ -14,11 +14,6 @@ namespace TutoringApp.Views
 
         async void Button_Clicked(object sender, EventArgs e)
         {
-            //await Navigation.PushAsync(new TeacherOverviewPage{});
-
-            //var teacherOverviewPage = new NavigationPage(new TeacherOverviewPage());
-            //await App.Current.MainPage.Navigation.PushAsync(teacherOverviewPage);
-
             await Shell.Current.GoToAsync("/TeacherOverviewPage");
         }
     }
