@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TutoringApp.Views.TeacherOverviewPage"
+             xmlns:local="clr-namespace:TutoringApp.ViewModels"  
+             xmlns:model="clr-namespace:TutoringApp.Models"
+             x:Name="BrowseTeachersPage"
+             Title="{Binding Title}">
+
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Sign Up" Command="{Binding AddTeacherCommand}" />
+    </ContentPage.ToolbarItems>
+
+  
+            <!--
+      x:DataType to enable compiled bindings:
+      https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/data-binding/compiled-bindings
+    -->
+    <RefreshView x:DataType="local:TeacherOverviewViewModel" Command="{Binding LoadTeachersCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+        <CollectionView ItemsSource="{Binding Teachers}"
+                                x:Name="ItemsListView"
+                SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout x:DataType="model:Teacher">
+                        <StackLayout Orientation="Horizontal" HeightRequest="120" Margin="10, 23, 10, 20">
+                            <Frame CornerRadius="10" Padding="0" IsClippedToBounds="True">
+                                <Image WidthRequest="120" HeightRequest="120"  Source="{Binding ProfilePictureSource, FallbackValue='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png'}"></Image>
+                            </Frame>
+                            <StackLayout Margin="20, 0">
+                                <Label Text="{Binding Name, FallbackValue='Name not found'}" FontSize="20" />
+                                <Label Text="{Binding Age, StringFormat='Age: {0}', FallbackValue='0'}" FontSize="20"></Label>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Spacing="0">
+                                    <Label Text="Subjects:" FontSize="20" LineBreakMode="NoWrap"></Label>
+                                    <Label Text="{Binding Subjects[0], StringFormat=' {0}'}" FontSize="20" HorizontalOptions="Start"></Label>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Spacing="0">
+                                    <Label Text="{Binding Subjects[1], StringFormat='{0}'}" FontSize="20" HorizontalOptions="Start" Padding="0, 0" Margin="0,0"></Label>
+                                    <Label Text="{Binding Subjects[2], StringFormat=', {0}'}" FontSize="20"></Label>
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+                        <BoxView HeightRequest="1" Color="Gray" Margin="10, 0"></BoxView>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer 
+                                NumberOfTapsRequired="1"
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:TeacherOverviewViewModel}}, Path=TeacherTapped}"		
+                                CommandParameter="{Binding .}">
+                            </TapGestureRecognizer>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </RefreshView>
+</ContentPage>
