@@ -93,8 +93,8 @@
     <AndroidResource Include="Resources\drawable\icon_feed.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LanguageTeacherApp\TutoringApp.csproj">
-      <Project>{42F51F13-A24C-4498-BFE6-946BD88270AC}</Project>
+    <ProjectReference Include="..\TutoringApp\TutoringApp.csproj">
+      <Project>{63085873-693b-4f48-9632-5912dcf081ae}</Project>
       <Name>TutoringApp</Name>
     </ProjectReference>
   </ItemGroup>

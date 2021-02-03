@@ -66,7 +66,7 @@ namespace TutoringApp.ViewModels
                 Occupation = Occupation
             };
 
-            Uri uri = new Uri(string.Format(Constants.TodoItemsUrl, string.Empty));
+            //Uri uri = new Uri(string.Format(Constants.TodoItemsUrl, string.Empty));
 
 
 
