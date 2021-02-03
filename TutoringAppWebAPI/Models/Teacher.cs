@@ -16,5 +16,34 @@ namespace TutoringAppWebAPI.Models
 
         [Required]
         public DateTime Birthday { get; set; }
+
+        public int Age
+        {
+            get
+            {
+                var today = DateTime.Today;
+                var calculatedAge = today.Year - Birthday.Year;
+                if (Birthday.Date > today.AddYears(-calculatedAge)) calculatedAge--;
+
+                return calculatedAge;
+            }
+        }
+
+        public enum _Gender { male, female }
+
+        [Required]
+        public _Gender Gender { get; set; }
+
+        [Required]
+        public string Occupation { get; set; }
+
+        public string NativeLanguage { get; set; }
+
+        public string CountryOfOrigin { get; set; }
+
+        public List<string> Subjects { get; set; }
+
+        [Required]
+        public string ProfilePictureSource { get; set; }
     }
 }
