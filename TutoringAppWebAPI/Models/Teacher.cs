@@ -29,10 +29,8 @@ namespace TutoringAppWebAPI.Models
             }
         }
 
-        public enum _Gender { male, female }
-
         [Required]
-        public _Gender Gender { get; set; }
+        public Gender Gender { get; set; }
 
         [Required]
         public string Occupation { get; set; }

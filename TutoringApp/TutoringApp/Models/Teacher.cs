@@ -23,8 +23,7 @@ namespace TutoringApp.Models
             }
         }
 
-        public enum _Gender { male, female }
-        public _Gender Gender { get; set; }
+        public Gender Gender { get; set; }
 
         public string Occupation { get; set; }
 
