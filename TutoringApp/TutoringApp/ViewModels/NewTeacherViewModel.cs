@@ -66,10 +66,6 @@ namespace TutoringApp.ViewModels
                 Occupation = Occupation
             };
 
-            //Uri uri = new Uri(string.Format(Constants.TodoItemsUrl, string.Empty));
-
-
-
             await TeacherDataStore.AddItemAsync(newTeacher);
 
             await Shell.Current.GoToAsync("..");
