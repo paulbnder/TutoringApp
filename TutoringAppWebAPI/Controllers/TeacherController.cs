@@ -18,9 +18,11 @@ namespace TutoringAppWebAPI.Controllers
             _teacherRepository = teacherRepository;
         }
 
-        public IActionResult Index()
+        [HttpGet]
+        public IActionResult List()
         {
-            return View();
+            return Ok(_teacherRepository.GetItemsAsync());
         }
+
     }
 }
