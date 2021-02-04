@@ -7,7 +7,7 @@ using TutoringAppWebAPI.Models;
 
 namespace TutoringAppWebAPI.Services
 {
-    public class TeacherRepository : IDataStore<Teacher>
+    public class TeacherRepository : IRepository<Teacher>
     {
         readonly List<Teacher> teachers;
         public TeacherRepository()
