@@ -62,12 +62,16 @@ namespace TutoringAppWebAPI.Services
             return await Task.FromResult(true);
         }
 
-        public async Task<bool> DeleteItemAsync(string id)
+        public void DeleteItemAsync(string id)
         {
             var oldTeacher = teachers.Where((Teacher arg) => arg.Id == id).FirstOrDefault();
             teachers.Remove(oldTeacher);
 
-            return await Task.FromResult(true);
+        }
+
+        public async Task<bool> DoesTeacherExist(string id)
+        {
+            return await Task.FromResult(teachers.Any(teacher => teacher.Id == id));
         }
     }
 }
