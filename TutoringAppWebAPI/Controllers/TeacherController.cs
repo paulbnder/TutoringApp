@@ -26,7 +26,7 @@ namespace TutoringAppWebAPI.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create([FromBody] Teacher teacher)
+        public async Task<IActionResult> CreateAsync([FromBody] Teacher teacher)
         {
             try
             {
@@ -34,12 +34,12 @@ namespace TutoringAppWebAPI.Controllers
                 {
                     return BadRequest(ErrorCode.TeacherIsNullOrModelStateInvalid.ToString());
                 }
-                bool teacherExists = _teacherRepository.DoesTeacherExist(teacher.Id);
+                bool teacherExists = await _teacherRepository.DoesTeacherExist(teacher.Id);
                 if (teacherExists)
                 {
                     return StatusCode(StatusCodes.Status409Conflict, ErrorCode.TeacherIDInUse.ToString());
                 }
-                _teacherRepository.AddItemAsync(teacher);
+                await _teacherRepository.AddItemAsync(teacher);
             }
             catch (Exception)
             {
