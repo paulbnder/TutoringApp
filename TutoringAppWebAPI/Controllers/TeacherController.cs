@@ -32,14 +32,14 @@ namespace TutoringAppWebAPI.Controllers
             {
                 if (teacher == null || !ModelState.IsValid)
                 {
-                    return BadRequest(ErrorCode.TodoItemNameAndNotesRequired.ToString());
+                    return BadRequest(ErrorCode.TeacherIsNullOrModelStateInvalid.ToString());
                 }
-                bool teacherExists = _teacherRepository.DoesTeacherExist(teacher.ID);
+                bool teacherExists = _teacherRepository.DoesTeacherExist(teacher.Id);
                 if (teacherExists)
                 {
                     return StatusCode(StatusCodes.Status409Conflict, ErrorCode.TeacherIDInUse.ToString());
                 }
-                _teacherRepository.Insert(teacher);
+                _teacherRepository.AddItemAsync(teacher);
             }
             catch (Exception)
             {
@@ -48,5 +48,15 @@ namespace TutoringAppWebAPI.Controllers
             return Ok(teacher);
         }
 
+    }
+
+    public enum ErrorCode
+    {
+        TeacherIsNullOrModelStateInvalid,
+        TeacherIDInUse,
+        RecordNotFound,
+        CouldNotCreateTeacher,
+        CouldNotUpdateTeacher,
+        CouldNotDeleteTeacher
     }
 }
