@@ -48,6 +48,29 @@ namespace TutoringAppWebAPI.Controllers
             return Ok(teacher);
         }
 
+        [HttpPut]
+        public IActionResult Edit([FromBody] Teacher teacher)
+        {
+            try
+            {
+                if (teacher == null || !ModelState.IsValid)
+                {
+                    return BadRequest(ErrorCode.TeacherIsNullOrModelStateInvalid.ToString());
+                }
+                var existingTeacher = _teacherRepository.GetItemAsync(teacher.Id);
+                if (existingTeacher == null)
+                {
+                    return NotFound(ErrorCode.RecordNotFound.ToString());
+                }
+                _teacherRepository.UpdateItemAsync(teacher);
+            }
+            catch (Exception)
+            {
+                return BadRequest(ErrorCode.CouldNotUpdateTeacher.ToString());
+            }
+            return NoContent();
+        }
+
     }
 
     public enum ErrorCode
