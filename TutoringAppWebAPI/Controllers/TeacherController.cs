@@ -71,7 +71,29 @@ namespace TutoringAppWebAPI.Controllers
             return NoContent();
         }
 
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(string id)
+        {
+            try
+            {
+                var teacher = _teacherRepository.DoesTeacherExist(id);
+                if (teacher == null)
+                {
+                    return NotFound(ErrorCode.RecordNotFound.ToString());
+                }
+                _teacherRepository.DeleteItemAsync(id);
+            }
+            catch (Exception)
+            {
+                return BadRequest(ErrorCode.CouldNotDeleteTeacher.ToString());
+            }
+            return NoContent();
+        }
+
     }
+
+
 
     public enum ErrorCode
     {
