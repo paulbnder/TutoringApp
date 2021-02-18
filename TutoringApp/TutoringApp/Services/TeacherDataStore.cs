@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.Net.Http;
+using System.Diagnostics;
 
 namespace TutoringApp.Services
 {
@@ -57,6 +58,22 @@ namespace TutoringApp.Services
             teachers.Add(teacher);
 
             return await Task.FromResult(true);
+
+
+            Uri uri = new Uri(string.Format(Constants.RestUrl, string.Empty));
+
+            string json = JsonConvert.SerializeObject(teacher);
+            StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            HttpResponseMessage response = null;
+
+            response = await client.PostAsync(uri, content);
+
+
+            if (response.IsSuccessStatusCode)
+            {
+                Debug.WriteLine("Teacher successfully saved.");
+            }
         }
 
         public async Task<bool> UpdateItemAsync(Teacher teacher)
