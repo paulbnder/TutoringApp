@@ -4,20 +4,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+using System.Net.Http;
 
 namespace TutoringApp.Services
 {
     public class TeacherDataStore: IDataStore<Teacher>
     {
+        HttpClient client;
+
         readonly List<Teacher> teachers;
         public TeacherDataStore()
         {
+            client = new HttpClient();
+
+
             List<string> subjectsMathsPhysics = new List<string>(new string[] { "Maths", "Physics" });
             List<string> subjectsMaths = new List<string>(new string[] { "Maths" });
             List<string> subjectsEnglishSpanish = new List<string>(new string[] { "English", "Spanish" });
             List<string> subjectsMathsPhysicsChemistry = new List<string>(new string[] { "Maths", "Physics", "Chemistry" });
             List<string> subjectsEnglishSpanishFrench = new List<string>(new string[] { "English", "Spanish", "French" });
-
 
             teachers = new List<Teacher>()
             {
