@@ -14,7 +14,7 @@ namespace TutoringApp.Services
     {
         HttpClient client;
 
-        readonly List<Teacher> teachers;
+        List<Teacher> teachers;
         public TeacherDataStore()
         {
             client = new HttpClient();
@@ -50,14 +50,33 @@ namespace TutoringApp.Services
 
         public async Task<IEnumerable<Teacher>> GetItemsAsync(bool forceRefresh = false)
         {
-            return await Task.FromResult(teachers);
+            //return await Task.FromResult(teachers);
+
+            teachers = new List<Teacher>();
+
+            Uri uri = new Uri(string.Format(Constants.RestUrl, string.Empty));
+            try
+            {
+                HttpResponseMessage response = await client.GetAsync(uri);
+                if (response.IsSuccessStatusCode)
+                {
+                    string content = await response.Content.ReadAsStringAsync();
+                    teachers = JsonConvert.DeserializeObject<List<Teacher>>(content);
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(@"\tERROR {0}", ex.Message);
+            }
+
+            return teachers;
         }
 
-        public async Task<bool> AddItemAsync(Teacher teacher)
+        public async Task<Object> AddItemAsync(Teacher teacher)
         {
-            teachers.Add(teacher);
+            //teachers.Add(teacher);
 
-            return await Task.FromResult(true);
+            //return await Task.FromResult(true);
 
 
             Uri uri = new Uri(string.Format(Constants.RestUrl, string.Empty));
@@ -74,6 +93,8 @@ namespace TutoringApp.Services
             {
                 Debug.WriteLine("Teacher successfully saved.");
             }
+
+            return response;
         }
 
         public async Task<bool> UpdateItemAsync(Teacher teacher)
