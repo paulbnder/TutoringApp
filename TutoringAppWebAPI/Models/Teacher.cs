@@ -8,13 +8,13 @@ namespace TutoringAppWebAPI.Models
 {
     public class Teacher
     {
-        [Required]
+        //[Required]
         public string Id { get; set; }
 
         [Required]
         public string Name { get; set; }
 
-        [Required]
+        //[Required]
         public DateTime Birthday { get; set; }
 
         public int Age
@@ -29,10 +29,10 @@ namespace TutoringAppWebAPI.Models
             }
         }
 
-        [Required]
+        //[Required]
         public Gender Gender { get; set; }
 
-        [Required]
+        //[Required]
         public string Occupation { get; set; }
 
         public string NativeLanguage { get; set; }
@@ -41,7 +41,7 @@ namespace TutoringAppWebAPI.Models
 
         public List<string> Subjects { get; set; }
 
-        [Required]
+        //[Required]
         public string ProfilePictureSource { get; set; }
     }
 }
