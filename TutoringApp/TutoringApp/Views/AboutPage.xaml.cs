@@ -14,7 +14,7 @@ namespace TutoringApp.Views
 
         async void Button_Clicked(object sender, EventArgs e)
         {
-            await Shell.Current.GoToAsync("/TeacherOverviewPage");
+            await Shell.Current.GoToAsync("TeacherOverviewPage");
         }
     }
 }
