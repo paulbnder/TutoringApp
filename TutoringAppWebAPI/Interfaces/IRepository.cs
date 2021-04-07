@@ -12,6 +12,8 @@ namespace TutoringAppWebAPI.Interfaces
         void DeleteItemAsync(string id);
         Task<T> GetItemAsync(string id);
         Task<IEnumerable<T>> GetItemsAsync(bool forceRefresh = false);
+        IEnumerable<T> GetItems(bool forceRefresh = false);
+
         Task<bool> DoesTeacherExist(string id);
     }
 }

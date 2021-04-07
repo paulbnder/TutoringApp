@@ -22,7 +22,7 @@ namespace TutoringAppWebAPI.Controllers
         [HttpGet]
         public IActionResult List()
         {
-            return Ok(_teacherRepository.GetItemsAsync());
+            return Ok(_teacherRepository.GetItems());
         }
 
         [HttpPost]

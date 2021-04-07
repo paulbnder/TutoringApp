@@ -46,6 +46,11 @@ namespace TutoringAppWebAPI.Services
             return await Task.FromResult(teachers);
         }
 
+        public IEnumerable<Teacher> GetItems(bool forceRefresh = false)
+        {
+            return teachers;
+        }
+
         public async Task<bool> AddItemAsync(Teacher teacher)
         {
             teachers.Add(teacher);
