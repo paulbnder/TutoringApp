@@ -26,11 +26,11 @@
                     <StackLayout x:DataType="model:Teacher">
                         <StackLayout Orientation="Horizontal" HeightRequest="120" Margin="10, 23, 10, 20">
                             <Frame CornerRadius="10" Padding="0" IsClippedToBounds="True">
-                                <Image WidthRequest="120" HeightRequest="120"  Source="{Binding ProfilePictureSource, FallbackValue='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png'}"></Image>
+                                <Image WidthRequest="120" HeightRequest="120"  Source="{Binding ProfilePictureSource, TargetNullValue={StaticResource fallbackImageUrl}}"></Image>
                             </Frame>
                             <StackLayout Margin="20, 0">
-                                <Label Text="{Binding Name, FallbackValue='Name not found'}" FontSize="20" />
-                                <Label Text="{Binding Age, StringFormat='Age: {0}', FallbackValue='0'}" FontSize="20"></Label>
+                                <Label Text="{Binding Name, TargetNullValue={StaticResource fallbackImageUrl}}" FontSize="20" />
+                                <Label Text="{Binding Age, StringFormat='Age: {0}', TargetNullValue={StaticResource fallbackImageUrl}}" FontSize="20"></Label>
                                 <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Spacing="0">
                                     <Label Text="Subjects:" FontSize="20" LineBreakMode="NoWrap"></Label>
                                     <Label Text="{Binding Subjects[0], StringFormat=' {0}'}" FontSize="20" HorizontalOptions="Start"></Label>

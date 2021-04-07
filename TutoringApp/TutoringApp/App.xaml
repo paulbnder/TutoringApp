@@ -7,6 +7,7 @@
     -->
     <Application.Resources>
         <ResourceDictionary>
+            <x:String x:Key="fallbackImageUrl">https://upload.wikimedia.org/wikipedia/commons/2/20/Point_d_interrogation.jpg</x:String>
             <Color x:Key="Primary">#2196F3</Color>
             <Style TargetType="Button">
                 <Setter Property="TextColor" Value="White"></Setter>
