@@ -4,7 +4,11 @@ using System.Text;
 
 namespace TutoringApp.ViewModels
 {
-    class MessagesOverviewViewModel
+    public class MessagesOverviewViewModel : BaseViewModel
     {
+        public MessagesOverviewViewModel()
+        {
+        Title = "Chats";
+        }
     }
 }
