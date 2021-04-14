@@ -12,9 +12,14 @@ namespace TutoringApp.Views
             InitializeComponent();
         }
 
-        async void Button_Clicked(object sender, EventArgs e)
+        async void navigateToTeacherOverviewPage(object sender, EventArgs e)
         {
             await Shell.Current.GoToAsync("TeacherOverviewPage");
+        }
+
+        async void navigateToNewTeacherPage(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("NewTeacherPage");
         }
     }
 }

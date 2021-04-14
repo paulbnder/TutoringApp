@@ -15,28 +15,19 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-        <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
-                <ContentView Padding="0,40,0,10" VerticalOptions="FillAndExpand">
-                    <Image Source="xamarin_logo.png" VerticalOptions="Center" HeightRequest="64" />
-                </ContentView>
-            </StackLayout>
+
+    <ScrollView Grid.Row="1">
+        <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+            <Button Margin="0,10,0,0" Text="Register as teacher"
+                    BackgroundColor="{StaticResource Primary}"
+                    TextColor="Red" 
+                    Clicked="navigateToNewTeacherPage"/>
+            <Button Margin="0,10,0,0" Text="Browse Teachers"
+                    BackgroundColor="{StaticResource Primary}"
+                    TextColor="White" 
+                    Clicked="navigateToTeacherOverviewPage"/>
         </StackLayout>
-        <ScrollView Grid.Row="1">
-            <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
-                <Button Margin="0,10,0,0" Text="Browse Teachers"
-                        
-                        BackgroundColor="{StaticResource Primary}"
-                        TextColor="Red" 
-                        Clicked="Button_Clicked"/>
-                    <!--Command="{Binding OpenWebCommand}"-->
-            </StackLayout>
-        </ScrollView>
-    </Grid>
+    </ScrollView>
+
 
 </ContentPage>
