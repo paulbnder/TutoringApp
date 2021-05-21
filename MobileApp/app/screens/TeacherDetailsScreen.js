@@ -1,9 +1,34 @@
 import React from 'react';
-import { View } from 'react-native';
+import { AntDesign } from '@expo/vector-icons';
+import { StyleSheet } from 'react-native';
+import { useTheme } from '@react-navigation/native';
+import * as Haptics from 'expo-haptics';
 
-function TeacherDetailsScreen({teacher}) {
+
+
+
+function TeacherDetailsScreen({ navigation, route }) {
+    const { margin, colors } = useTheme();
+
+    const goBack = () => {
+        navigation.goBack();
+        Haptics.selectionAsync();
+      };
+
+    const styles = StyleSheet.create({
+        closeIcon: {
+            zIndex: 10,
+            top: margin,
+            right: margin,
+            opacity: 0.75,
+            color: colors.text,
+            position: 'absolute',
+          },
+    })
+
     return (
-        <View></View>
+        <AntDesign size={27} name="close" onPress={goBack} style={styles.closeIcon} />
+
     );
 }
 
