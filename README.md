@@ -12,4 +12,4 @@ Execute "npm start" in the MobileApp folder to start the Expo Metro Bundler. Run
 
 TutoringAppWebAPIフォルダで "dotnet run "を実行し、Web APIをローカルに実行します。
 
-MobileAppフォルダ内で "npm start "を実行し、Expo Metro Bundlerを起動します。Expo Metro BundlerからIOSまたはAndroidエミュレータでアプリを実行します。
+MobileAppフォルダ内で "npm start "を実行し、Expo Metro Bundlerを起動します。Expo Metro BundlerからIOSまたはAndroidエミュレータでアプリを実行します。 
