@@ -22,17 +22,17 @@ namespace TutoringAppWebAPI.Services
             teachers = new List<Teacher>()
             {
                 new Teacher { Id = Guid.NewGuid().ToString(), Name = "Larisa Samuel", Birthday = new DateTime(2000, 8, 14), NativeLanguage="English", Occupation="Student", Subjects=subjectsMathsPhysics,
-                ProfilePictureSource="https://source.unsplash.com/ROJFuWCsfmA/100x100"},
+                ProfilePictureSource="https://source.unsplash.com/ROJFuWCsfmA/300x300"},
                 new Teacher { Id = Guid.NewGuid().ToString(), Name = "Peter Gray", Birthday = new DateTime(1995, 10, 4), NativeLanguage="German", Occupation="Student", Subjects=subjectsMathsPhysicsChemistry,
-                ProfilePictureSource="https://source.unsplash.com/c_GmwfHBDzk/100x100"},
+                ProfilePictureSource="https://source.unsplash.com/c_GmwfHBDzk/300x300"},
                 new Teacher { Id = Guid.NewGuid().ToString(), Name = "Loretta Dylan", Birthday = new DateTime(1998, 2, 1), NativeLanguage="Spanish", Occupation="Librarian", Subjects=subjectsEnglishSpanishFrench,
-                ProfilePictureSource="https://source.unsplash.com/JN0SUcTOig0/100x100"},
+                ProfilePictureSource="https://source.unsplash.com/JN0SUcTOig0/300x300"},
                 new Teacher { Id = Guid.NewGuid().ToString(), Name = "Brynne Starr", Birthday = new DateTime(2002, 7, 30), NativeLanguage="English", Occupation="Web Designer", Subjects=subjectsMaths,
-                ProfilePictureSource="https://source.unsplash.com/tTdC88_6a_I/100x100"},
+                ProfilePictureSource="https://source.unsplash.com/tTdC88_6a_I/300x300"},
                 new Teacher { Id = Guid.NewGuid().ToString(), Name = "Roland Sandy", Birthday = new DateTime(2001, 11, 18), NativeLanguage="Japanese", Subjects=subjectsEnglishSpanishFrench,
-                ProfilePictureSource="https://source.unsplash.com/YUu9UAcOKZ4/100x100"},
+                ProfilePictureSource="https://source.unsplash.com/YUu9UAcOKZ4/300x300"},
                 new Teacher { Id = Guid.NewGuid().ToString(), Name = "Ronan Kurtis", Birthday = new DateTime(1990, 5, 17), NativeLanguage="English", Occupation="Student", Subjects=subjectsEnglishSpanish,
-                ProfilePictureSource="https://source.unsplash.com/v2aKnjMbP_k/100x100"}
+                ProfilePictureSource="https://source.unsplash.com/v2aKnjMbP_k/300x300"}
             };
         }
 
@@ -46,7 +46,7 @@ namespace TutoringAppWebAPI.Services
             return await Task.FromResult(teachers);
         }
 
-        public IEnumerable<Teacher> GetItems(bool forceRefresh = false)
+        public List<Teacher> GetItems(bool forceRefresh = false)
         {
             return teachers;
         }
