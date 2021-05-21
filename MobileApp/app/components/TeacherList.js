@@ -49,8 +49,8 @@ function TeacherList({ teachers, title }) {
       borderRadius: 20,
       alignItems: 'center',
       justifyContent: 'center',
-      /* width: width - margin * 2,
-      paddingVertical: margin * 2, */
+      width: width - margin * 2,
+      paddingVertical: margin * 2,
       backgroundColor: colors.background,
     },
     emptyText: {
