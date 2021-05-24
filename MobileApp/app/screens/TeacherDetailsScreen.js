@@ -3,7 +3,7 @@ import { AntDesign } from '@expo/vector-icons';
 import { StyleSheet, View } from 'react-native';
 import { useTheme } from '@react-navigation/native';
 import * as Haptics from 'expo-haptics';
-import { Avatar } from 'react-native-elements';
+import { Avatar, Text, Divider } from 'react-native-elements';
 
 
 
@@ -30,7 +30,8 @@ function TeacherDetailsScreen({ navigation, route }) {
           },
         container: {
             top: 40,
-            alignItems: 'center'
+            alignItems: 'center',
+            padding: 10
         }
     })
 
@@ -45,8 +46,9 @@ function TeacherDetailsScreen({ navigation, route }) {
                     size = "xlarge"
                     rounded
                     >
-                    <Avatar.Accessory size={40}/>
                 </Avatar>
+                <Text h3>{teacher.name}</Text>
+                <Divider style={{height: 2,     alignSelf: 'stretch', backgroundColor: "#e1e8ee"}} />
             </View>
         </View>
     );
