@@ -35,6 +35,8 @@ namespace TutoringAppWebAPI.Models
         //[Required]
         public string Occupation { get; set; }
 
+        public string AboutMeText { get; set; }
+
         public string NativeLanguage { get; set; }
 
         public string CountryOfOrigin { get; set; }
