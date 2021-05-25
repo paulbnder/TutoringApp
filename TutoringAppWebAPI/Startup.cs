@@ -31,8 +31,6 @@ namespace TutoringAppWebAPI
             //services.AddControllers();
             services.AddMvc();
             services.AddSingleton<IRepository<Teacher>, TeacherRepository>();
-            services.AddSingleton<IToDoRepository, ToDoRepository>();
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
