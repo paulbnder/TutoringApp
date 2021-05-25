@@ -3,7 +3,8 @@ import { AntDesign } from '@expo/vector-icons';
 import { StyleSheet, View } from 'react-native';
 import { useTheme } from '@react-navigation/native';
 import * as Haptics from 'expo-haptics';
-import { Avatar, Text, Divider } from 'react-native-elements';
+import { Avatar, Text } from 'react-native-elements';
+import TextArea from '../components/TextArea';
 
 
 
@@ -32,7 +33,7 @@ function TeacherDetailsScreen({ navigation, route }) {
             top: 40,
             alignItems: 'center',
             padding: 10
-        }
+        },
     })
 
     return (
@@ -48,7 +49,7 @@ function TeacherDetailsScreen({ navigation, route }) {
                     >
                 </Avatar>
                 <Text h3>{teacher.name}</Text>
-                <Divider style={{height: 2,     alignSelf: 'stretch', backgroundColor: "#e1e8ee"}} />
+                <TextArea title='test' text={teacher.aboutMeText}></TextArea>
             </View>
         </View>
     );
