@@ -32,7 +32,7 @@ namespace TutoringAppWebAPI.Services
                 new Teacher { Id = Guid.NewGuid().ToString(), Name = "Roland Sandy", Birthday = new DateTime(2001, 11, 18), NativeLanguage="Japanese", Subjects=subjectsEnglishSpanishFrench,
                 ProfilePictureSource="https://source.unsplash.com/YUu9UAcOKZ4/300x300"},
                 new Teacher { Id = Guid.NewGuid().ToString(), Name = "Ronan Kurtis", Birthday = new DateTime(1990, 5, 17), NativeLanguage="English", Occupation="Student", Subjects=subjectsEnglishSpanish,
-                ProfilePictureSource="https://source.unsplash.com/v2aKnjMbP_k/300x300"}
+                ProfilePictureSource="https://source.unsplash.com/v2aKnjMbP_k/300x300", AboutMeText="Etiam imperdiet imperdiet orci. Morbi vestibulum volutpat enim. Phasellus volutpat, metus eget egestas mollis, lacus lacus blandit dui, id egestas quam mauris ut lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Nullam quis ante Nullam accumsan lorem in dui. Fusce a quam. In turpis. Etiam vitae tortor. Pellentesque commodo eros a enim."}
             };
         }
 
