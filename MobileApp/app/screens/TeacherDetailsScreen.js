@@ -49,7 +49,9 @@ function TeacherDetailsScreen({ navigation, route }) {
                     >
                 </Avatar>
                 <Text h3>{teacher.name}</Text>
-                <TextArea title='test' text={teacher.aboutMeText}></TextArea>
+                <TextArea title='About me' text={teacher.aboutMeText}></TextArea>
+                <TextArea title='I can teach' text={teacher.subjects.join(', ')}></TextArea>
+                <TextArea title='Age' text={teacher.age}></TextArea>
             </View>
         </View>
     );

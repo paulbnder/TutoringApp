@@ -7,14 +7,15 @@ function TextArea({text, title}) {
     const styles = StyleSheet.create({
         container: {
             alignSelf: 'stretch',
-            alignItems: 'center'
+            alignItems: 'flex-start',
+            marginTop: 20
         }
     })
     return (
         <View style={styles.container}>
-            <Divider style={{height: 2, alignSelf: 'stretch', backgroundColor: "#e1e8ee"}} />
-            <Text h3>{title}</Text>
+            <Text h4>{title}</Text>
             <Text h5>{text}</Text>
+            <Divider style={{height: 2, alignSelf: 'stretch', backgroundColor: "#e1e8ee"}} />
         </View>
     );
 }
