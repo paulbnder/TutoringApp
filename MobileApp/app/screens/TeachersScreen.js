@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { ScrollView, Text, StyleSheet, View, FlatList } from 'react-native';
+import { ScrollView, StyleSheet, View, FlatList } from 'react-native';
 import TeacherList from '../components/TeacherList'
 import { useTheme } from '@react-navigation/native';
 import Animated, {
     interpolate, useAnimatedStyle, useSharedValue, useAnimatedScrollHandler, useAnimatedProps,
 } from 'react-native-reanimated';
 import Constants from 'expo-constants';
+import { Text } from 'react-native-elements';
+
 
 
 
@@ -47,7 +49,7 @@ function TeachersScreen({ navigation }) {
 
   return (
     <ScrollView style={styles.container}>
-      <Text style={styles.heading}>Find teachers for your subject</Text>
+      <Text h4 style={styles.heading}>Find teachers for your subject</Text>
       <Animated.ScrollView
       scrollEventThrottle={8}
       onScroll={scrollHandler}
