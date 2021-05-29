@@ -37,13 +37,11 @@ function TeachersScreen({ navigation }) {
 
   const styles = StyleSheet.create({
     container: {
-      marginTop: status
+      paddingTop: status,
+      backgroundColor: 'white'
     },
     heading: {
-      paddingTop: margin,
       paddingHorizontal: margin,
-      flexDirection: 'row',
-      justifyContent: 'space-between',
     },
   });
 

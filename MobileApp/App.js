@@ -1,34 +1,37 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import TeachersScreen from './app/screens/TeachersScreen';
-import { createSharedElementStackNavigator } from 'react-navigation-shared-element';
 import { NavigationContainer } from '@react-navigation/native';
 import getTheme from './app/theme';
 import { AppearanceProvider, useColorScheme } from 'react-native-appearance';
-import TeacherDetailsScreen from './app/screens/TeacherDetailsScreen'
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+import StackNavigator from './app/components/StackNavigator';
+import SignUpScreen from './app/screens/SignUpScreen';
+import Icon from 'react-native-vector-icons/Ionicons';
+
 
 
 
 
 export default function App() {
-  const TutoringAppStack = createSharedElementStackNavigator();
   const scheme = useColorScheme();
+  const Tab = createMaterialBottomTabNavigator();
 
 
   return (
     <NavigationContainer theme={getTheme(scheme)}>
-      <TutoringAppStack.Navigator
-        initialRouteName="List"
-        screenOptions={{
-          headerShown: false,
-          cardOverlayEnabled: true,
-          cardStyle: { backgroundColor: 'transparent' },
-        }}
-      >
-        <TutoringAppStack.Screen style={styles.container} name="TeachersScreen" component={TeachersScreen}/>
-        <TutoringAppStack.Screen style={styles.container} name="TeacherDetailsScreen" component={TeacherDetailsScreen}/>
+     <Tab.Navigator screenOptions={({ route }) => ({
+          tabBarIcon: ({  }) => {
+            return <Icon name="ios-person" size={20} color="white" />;
+          },
+        })}
+        tabBarOptions={{
+          activeTintColor: 'tomato',
+          inactiveTintColor: 'gray',
+        }}>
+        <Tab.Screen name="Teachers" component={StackNavigator} />
+        <Tab.Screen name="SignUp" component={SignUpScreen} />
 
-      </TutoringAppStack.Navigator>
+      </Tab.Navigator>
     </NavigationContainer>
   );
 }

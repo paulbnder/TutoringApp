@@ -1,10 +1,11 @@
 import React from 'react';
 import { AntDesign } from '@expo/vector-icons';
-import { StyleSheet, View } from 'react-native';
+import { ScrollView, StyleSheet, View } from 'react-native';
 import { useTheme } from '@react-navigation/native';
 import * as Haptics from 'expo-haptics';
 import { Avatar, Text } from 'react-native-elements';
 import TextArea from '../components/TextArea';
+import { FlatList } from 'react-native-gesture-handler';
 
 
 
@@ -37,9 +38,7 @@ function TeacherDetailsScreen({ navigation, route }) {
     })
 
     return (
-        <View >
-            <AntDesign size={27} name="close" onPress={goBack} style={styles.closeIcon} />
-            <View style={styles.container}>
+            <ScrollView  contentContainerStyle={styles.container}>
                 <Avatar
                     source={{
                         uri:teacher.profilePictureSource
@@ -52,8 +51,10 @@ function TeacherDetailsScreen({ navigation, route }) {
                 <TextArea title='About me' text={teacher.aboutMeText}></TextArea>
                 <TextArea title='I can teach' text={teacher.subjects.join(', ')}></TextArea>
                 <TextArea title='Age' text={teacher.age}></TextArea>
-            </View>
-        </View>
+                <TextArea title='About me' text={teacher.aboutMeText}></TextArea>
+                <TextArea title='About me' text={teacher.aboutMeText}></TextArea>
+
+            </ScrollView>
     );
 }
 
